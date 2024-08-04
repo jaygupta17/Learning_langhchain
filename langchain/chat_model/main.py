@@ -1,8 +1,12 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv 
 import streamlit as st
-load_dotenv()
+import os
 
+# load_dotenv()
+# .streamlit/secrets.toml
+
+os.environ["GROQ_API_KEY"] == st.secrets["GROQ_API_KEY"]
 llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=0,
